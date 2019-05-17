@@ -1,6 +1,7 @@
 module Boolfuck where
 
 import Data.Char (chr, ord)
+import Data.List.Zipper
 
 data Bit = Zero | One deriving (Show, Eq)
 
@@ -138,32 +139,3 @@ byteToBits i = f 8 i []
   where
     f 0 _ xs = reverse xs
     f n x xs = f (n - 1) (x `div` 2) ((if (x `mod` 2 == 1) then One else Zero) : xs)
-
--- Everything below here is only included because the CodeWars environment does
--- not allow the import of Data.List.Zipper.
-data Zipper a = Zip ![a] ![a] deriving (Eq,Show)
-
-fromList :: [a] -> Zipper a
-fromList as = Zip [] as
-
-endp :: Zipper a -> Bool
-endp   (Zip _  []) = True
-endp   _           = False
-
-cursor :: Zipper a -> a
-cursor (Zip _ (a:_)) = a
-
-left :: Zipper a -> Zipper a
-left  (Zip (a:ls) rs) = Zip ls (a:rs)
-left  z               = z
-
-right :: Zipper a -> Zipper a
-right (Zip ls (a:rs)) = Zip (a:ls) rs
-right z               = z
-
-replace :: a -> Zipper a -> Zipper a
-replace a (Zip ls (_:rs)) = Zip ls (a:rs)
-replace _ z               = z
-
-empty :: Zipper a
-empty = Zip [] []

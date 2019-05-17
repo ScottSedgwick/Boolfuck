@@ -1,12 +1,29 @@
-# Esolang Interpreters #4 - Boolfuck Interpreter
+# Haskell language interpreter exercise
 
-## About this Kata Series
+This is a copy of the [Codewars](https://www.codewars.com) exercise, moved into a [Stack](https://www.haskellstack.org/) project.
+
+Instructions are simple:
+
+1. Clone the `master` branch
+2. Run `stack test`
+3. Add code to `src/Boolfuck.hs`
+4. Repeat steps 2 & 3 until all the tests are green.
+
+If you want to cheat, my submitted answer to Codewars is in the `solution` branch.  It is a bit untidy, and does not make use of some libraries that it should, because they are not in the Codewars environment.
+
+The tidier version, using all the libraries, is in the `refined` branch.
+
+Below is the instructions from Codewars:
+
+## Esolang Interpreters #4 - Boolfuck Interpreter
+
+### About this Kata Series
 
 "Esolang Interpreters" is a Kata Series that originally began as three separate, independent esolang interpreter Kata authored by @donaldsebleung which all shared a similar format and were all somewhat inter-related. Under the influence of a fellow Codewarrior, these three high-level inter-related Kata gradually evolved into what is known today as the "Esolang Interpreters" series.
 
 This series is a high-level Kata Series designed to challenge the minds of bright and daring programmers by implementing interpreters for various esoteric programming languages/Esolangs, mainly Brainfuck derivatives but not limited to them, given a certain specification for a certain Esolang. Perhaps the only exception to this rule is the very first Kata in this Series which is intended as an introduction/taster to the world of esoteric programming languages and writing interpreters for them.
 
-## The Language
+### The Language
 
 Boolfuck is an esoteric programming language (Esolang) based on the famous Brainfuck (also an Esolang) which was invented in 2004 or 2005 according to the official website. It is very similar to Brainfuck except for a few key differences:
 
@@ -30,7 +47,7 @@ Anyway, here is a list of commands and their descriptions:
 
 If you haven't written an interpreter for Brainfuck yet I recommend you to complete this Kata first.
 
-## The Task
+### The Task
 
 Write a Boolfuck interpreter which accepts up to two arguments. The first (required) argument is the Boolfuck code in the form of a string. The second (optional) argument is the input passed in by the end-user (i.e. as actual characters not bits) which should default to "" if not provided. Your interpreter should return the output as actual characters (not bits!) as a string.
 
@@ -46,7 +63,7 @@ If in doubt, feel free to refer to the official website (link at top).
 
 Good luck :D
 
-## Kata in this Series
+### Kata in this Series
 
 [Esolang Interpreters #1 - Introduction to Esolangs and My First Interpreter (MiniStringFuck)](https://www.codewars.com/kata/esolang-interpreters-number-1-introduction-to-esolangs-and-my-first-interpreter-ministringfuck)
 

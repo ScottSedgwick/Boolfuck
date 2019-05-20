@@ -7,7 +7,7 @@ import Data.List.Zipper (empty, endp)
 
 spec :: Spec
 spec =
-  describe "interpret Boolfuck" $ do
+  describe "Boolfuck Example Tests" $ do
     it "Empty tests" $
       boolfuck "" "" `shouldBe` ""
 

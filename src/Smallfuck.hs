@@ -1,6 +1,6 @@
 module Smallfuck where
 
--- import Data.List.Zipper (Zipper(..), beginp, cursor, endp, left, replace, right, toList)
+import Data.List.Zipper (Zipper(..), beginp, cursor, endp, left, replace, right, toList)
 
 data State = State
   { sTape :: Zipper Bool
@@ -81,32 +81,3 @@ skipBack n s = case cursor (sCode s) of
   where
     sL = s { sCode = left (sCode s) }
     sR = s { sCode = right (sCode s) }
-
--- Zipper implementation
-data Zipper a = Zip ![a] ![a] deriving (Eq,Show)
-
-beginp :: Zipper a -> Bool
-beginp (Zip [] _ ) = True
-beginp _           = False
-
-cursor :: Zipper a -> a
-cursor (Zip _ (a:_)) = a
-
-endp :: Zipper a -> Bool
-endp   (Zip _  []) = True
-endp   _           = False
-
-left :: Zipper a -> Zipper a
-left  (Zip (a:ls) rs) = Zip ls (a:rs)
-left  z               = z
-
-right :: Zipper a -> Zipper a
-right (Zip ls (a:rs)) = Zip (a:ls) rs
-right z               = z
-
-replace :: a -> Zipper a -> Zipper a
-replace a (Zip ls (_:rs)) = Zip ls (a:rs)
-replace _ z               = z
-
-toList :: Zipper a -> [a]
-toList (Zip ls rs) = reverse ls ++ rs

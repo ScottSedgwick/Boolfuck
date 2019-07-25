@@ -24,7 +24,7 @@ cache:
 matrix:
   include:
   # Default build on Linux
-  - env: BUILD=stack ARGS=""
+  - env: BUILD=stack ARGS="--resolver lts-13.29"
     compiler: ": #stack 8.6.5"
     addons: {apt: {packages: [ghc-8.6.5], sources: [hvr-ghc]}}
 
@@ -33,8 +33,8 @@ matrix:
     compiler: ": #stack nightly"
 
   # Default build on OS X
-  - env: BUILD=stack ARGS=""
-    compiler: ": #stack default osx"
+  - env: BUILD=stack ARGS="--resolver lts-13.29"
+    compiler: ": #stack 8.6.5 osx"
     os: osx
 
   # Nightly build on OS X

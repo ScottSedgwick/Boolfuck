@@ -21,6 +21,10 @@ description:         Please see the README on GitHub at <https://github.com/Scot
 
 dependencies:
 - base >= 4.7 && < 5
+- ListZipper
+- matrix
+- split
+- vector
 
 library:
   source-dirs: src
@@ -36,3 +40,4 @@ tests:
     dependencies:
     - boolfuck
     - hspec
+    - ListZipper

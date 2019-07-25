@@ -72,3 +72,7 @@ Good luck :D
 [Esolang Interpreters #3 - Custom Paintfuck Interpreter](http://codewars.com/kata/esolang-interpreters-number-3-custom-paintf-star-star-k-interpreter)
 
 [Esolang Interpreters #4 - Boolfuck Interpreter](https://www.codewars.com/kata/esolang-interpreters-number-4-boolfuck-interpreter)
+
+### Other Kata
+
+I have added other Kata from this series as I complete them to this repo.  Currently only MiniStringFuck is complete.

@@ -31,7 +31,6 @@ matrix:
   # Nightly build on OS X
   - env: BUILD=stack ARGS="--resolver nightly"
     compiler: ": #stack nightly"
-    addons: {apt: {packages: [libgmp,libgmp-dev]}}
 
   # Default build on OS X
   - env: BUILD=stack ARGS=""

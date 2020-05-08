@@ -1,5 +1,4 @@
 .stack-work/
-boolfuck.cabal
 *~
 dist-newstyle
 stack.yaml.lock
